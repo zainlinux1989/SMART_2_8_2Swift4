@@ -109,7 +109,7 @@ public class Immunization: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["doseQuantity"] {
@@ -118,7 +118,7 @@ public class Immunization: DomainResource {
 					self.doseQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "doseQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "doseQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["encounter"] {
@@ -127,7 +127,7 @@ public class Immunization: DomainResource {
 					self.encounter = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "encounter", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "encounter", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["expirationDate"] {
@@ -136,7 +136,7 @@ public class Immunization: DomainResource {
 					self.expirationDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "expirationDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "expirationDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["explanation"] {
@@ -145,7 +145,7 @@ public class Immunization: DomainResource {
 					self.explanation = ImmunizationExplanation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "explanation", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "explanation", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -154,7 +154,7 @@ public class Immunization: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["location"] {
@@ -163,7 +163,7 @@ public class Immunization: DomainResource {
 					self.location = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "location", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "location", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["lotNumber"] {
@@ -172,7 +172,7 @@ public class Immunization: DomainResource {
 					self.lotNumber = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "lotNumber", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "lotNumber", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["manufacturer"] {
@@ -181,7 +181,7 @@ public class Immunization: DomainResource {
 					self.manufacturer = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "manufacturer", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "manufacturer", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["note"] {
@@ -190,7 +190,7 @@ public class Immunization: DomainResource {
 					self.note = Annotation.instantiate(fromArray: val, owner: self) as? [Annotation]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "note", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "note", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patient"] {
@@ -199,7 +199,7 @@ public class Immunization: DomainResource {
 					self.patient = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -211,7 +211,7 @@ public class Immunization: DomainResource {
 					self.performer = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "performer", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "performer", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reaction"] {
@@ -220,7 +220,7 @@ public class Immunization: DomainResource {
 					self.reaction = ImmunizationReaction.instantiate(fromArray: val, owner: self) as? [ImmunizationReaction]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reaction", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reaction", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reported"] {
@@ -229,7 +229,7 @@ public class Immunization: DomainResource {
 					self.reported = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reported", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reported", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -241,7 +241,7 @@ public class Immunization: DomainResource {
 					self.requester = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "requester", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "requester", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["route"] {
@@ -250,7 +250,7 @@ public class Immunization: DomainResource {
 					self.route = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "route", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "route", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["site"] {
@@ -259,7 +259,7 @@ public class Immunization: DomainResource {
 					self.site = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "site", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "site", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -268,7 +268,7 @@ public class Immunization: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -280,7 +280,7 @@ public class Immunization: DomainResource {
 					self.vaccinationProtocol = ImmunizationVaccinationProtocol.instantiate(fromArray: val, owner: self) as? [ImmunizationVaccinationProtocol]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "vaccinationProtocol", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "vaccinationProtocol", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["vaccineCode"] {
@@ -289,7 +289,7 @@ public class Immunization: DomainResource {
 					self.vaccineCode = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "vaccineCode", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "vaccineCode", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -301,7 +301,7 @@ public class Immunization: DomainResource {
 					self.wasNotGiven = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "wasNotGiven", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "wasNotGiven", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -414,7 +414,7 @@ public class ImmunizationExplanation: BackboneElement {
 					self.reason = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reason", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reason", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reasonNotGiven"] {
@@ -423,7 +423,7 @@ public class ImmunizationExplanation: BackboneElement {
 					self.reasonNotGiven = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reasonNotGiven", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reasonNotGiven", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -479,7 +479,7 @@ public class ImmunizationReaction: BackboneElement {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["detail"] {
@@ -488,7 +488,7 @@ public class ImmunizationReaction: BackboneElement {
 					self.detail = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "detail", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "detail", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reported"] {
@@ -497,7 +497,7 @@ public class ImmunizationReaction: BackboneElement {
 					self.reported = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reported", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reported", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -579,7 +579,7 @@ public class ImmunizationVaccinationProtocol: BackboneElement {
 					self.authority = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "authority", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "authority", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -588,7 +588,7 @@ public class ImmunizationVaccinationProtocol: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["doseSequence"] {
@@ -597,7 +597,7 @@ public class ImmunizationVaccinationProtocol: BackboneElement {
 					self.doseSequence = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "doseSequence", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "doseSequence", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -609,7 +609,7 @@ public class ImmunizationVaccinationProtocol: BackboneElement {
 					self.doseStatus = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "doseStatus", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "doseStatus", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -621,7 +621,7 @@ public class ImmunizationVaccinationProtocol: BackboneElement {
 					self.doseStatusReason = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "doseStatusReason", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "doseStatusReason", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["series"] {
@@ -630,7 +630,7 @@ public class ImmunizationVaccinationProtocol: BackboneElement {
 					self.series = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "series", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "series", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["seriesDoses"] {
@@ -639,7 +639,7 @@ public class ImmunizationVaccinationProtocol: BackboneElement {
 					self.seriesDoses = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "seriesDoses", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "seriesDoses", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["targetDisease"] {
@@ -648,7 +648,7 @@ public class ImmunizationVaccinationProtocol: BackboneElement {
 					self.targetDisease = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "targetDisease", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "targetDisease", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

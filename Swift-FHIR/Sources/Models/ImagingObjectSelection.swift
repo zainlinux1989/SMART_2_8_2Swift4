@@ -70,7 +70,7 @@ public class ImagingObjectSelection: DomainResource {
 					self.author = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "author", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "author", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["authoringTime"] {
@@ -79,7 +79,7 @@ public class ImagingObjectSelection: DomainResource {
 					self.authoringTime = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "authoringTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "authoringTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -88,7 +88,7 @@ public class ImagingObjectSelection: DomainResource {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patient"] {
@@ -97,7 +97,7 @@ public class ImagingObjectSelection: DomainResource {
 					self.patient = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -109,7 +109,7 @@ public class ImagingObjectSelection: DomainResource {
 					self.study = ImagingObjectSelectionStudy.instantiate(fromArray: val, owner: self) as? [ImagingObjectSelectionStudy]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "study", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "study", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -121,7 +121,7 @@ public class ImagingObjectSelection: DomainResource {
 					self.title = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "title", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "title", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -133,7 +133,7 @@ public class ImagingObjectSelection: DomainResource {
 					self.uid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -217,7 +217,7 @@ public class ImagingObjectSelectionStudy: BackboneElement {
 					self.imagingStudy = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "imagingStudy", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "imagingStudy", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["series"] {
@@ -226,7 +226,7 @@ public class ImagingObjectSelectionStudy: BackboneElement {
 					self.series = ImagingObjectSelectionStudySeries.instantiate(fromArray: val, owner: self) as? [ImagingObjectSelectionStudySeries]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "series", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "series", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -238,7 +238,7 @@ public class ImagingObjectSelectionStudy: BackboneElement {
 					self.uid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -250,7 +250,7 @@ public class ImagingObjectSelectionStudy: BackboneElement {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -318,7 +318,7 @@ public class ImagingObjectSelectionStudySeries: BackboneElement {
 					self.instance = ImagingObjectSelectionStudySeriesInstance.instantiate(fromArray: val, owner: self) as? [ImagingObjectSelectionStudySeriesInstance]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "instance", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "instance", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -330,7 +330,7 @@ public class ImagingObjectSelectionStudySeries: BackboneElement {
 					self.uid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["url"] {
@@ -339,7 +339,7 @@ public class ImagingObjectSelectionStudySeries: BackboneElement {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -409,7 +409,7 @@ public class ImagingObjectSelectionStudySeriesInstance: BackboneElement {
 					self.frames = ImagingObjectSelectionStudySeriesInstanceFrames.instantiate(fromArray: val, owner: self) as? [ImagingObjectSelectionStudySeriesInstanceFrames]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "frames", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "frames", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sopClass"] {
@@ -418,7 +418,7 @@ public class ImagingObjectSelectionStudySeriesInstance: BackboneElement {
 					self.sopClass = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sopClass", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sopClass", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -430,7 +430,7 @@ public class ImagingObjectSelectionStudySeriesInstance: BackboneElement {
 					self.uid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -442,7 +442,7 @@ public class ImagingObjectSelectionStudySeriesInstance: BackboneElement {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -511,7 +511,7 @@ public class ImagingObjectSelectionStudySeriesInstanceFrames: BackboneElement {
 					self.frameNumbers = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "frameNumbers", wants: Array<UInt>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "frameNumbers", wants: Array<UInt>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -523,7 +523,7 @@ public class ImagingObjectSelectionStudySeriesInstanceFrames: BackboneElement {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

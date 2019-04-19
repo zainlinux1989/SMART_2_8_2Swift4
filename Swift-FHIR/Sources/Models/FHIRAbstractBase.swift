@@ -58,7 +58,7 @@ open class FHIRAbstractBase: CustomStringConvertible {
 		if let supflu = superfluous, !supflu.isEmpty {
 			for sup in supflu {
 				if let first = sup.characters.first, "_" != first {
-					errors.append(FHIRJSONError(key: sup, has: type(of: json![sup]!)))
+					errors.append(FHIRJSONError(key: sup, has: Swift.type(of: json![sup]!)))
 				}
 			}
 		}
@@ -181,7 +181,7 @@ open class FHIRAbstractBase: CustomStringConvertible {
 	// MARK: - CustomStringConvertible
 	
 	open var description: String {
-		return "<\(type(of: self).resourceType)>"
+		return "<\(Swift.type(of: self).resourceType)>"
 	}
 }
 

@@ -96,7 +96,7 @@ public class ImplementationGuide: DomainResource {
 					self.binary = URL.instantiate(fromArray: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "binary", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "binary", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["contact"] {
@@ -105,7 +105,7 @@ public class ImplementationGuide: DomainResource {
 					self.contact = ImplementationGuideContact.instantiate(fromArray: val, owner: self) as? [ImplementationGuideContact]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["copyright"] {
@@ -114,7 +114,7 @@ public class ImplementationGuide: DomainResource {
 					self.copyright = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "copyright", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "copyright", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -123,7 +123,7 @@ public class ImplementationGuide: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["dependency"] {
@@ -132,7 +132,7 @@ public class ImplementationGuide: DomainResource {
 					self.dependency = ImplementationGuideDependency.instantiate(fromArray: val, owner: self) as? [ImplementationGuideDependency]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "dependency", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "dependency", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -141,7 +141,7 @@ public class ImplementationGuide: DomainResource {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["experimental"] {
@@ -150,7 +150,7 @@ public class ImplementationGuide: DomainResource {
 					self.experimental = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "experimental", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "experimental", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fhirVersion"] {
@@ -159,7 +159,7 @@ public class ImplementationGuide: DomainResource {
 					self.fhirVersion = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fhirVersion", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fhirVersion", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["global"] {
@@ -168,7 +168,7 @@ public class ImplementationGuide: DomainResource {
 					self.global = ImplementationGuideGlobal.instantiate(fromArray: val, owner: self) as? [ImplementationGuideGlobal]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "global", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "global", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -177,7 +177,7 @@ public class ImplementationGuide: DomainResource {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -189,7 +189,7 @@ public class ImplementationGuide: DomainResource {
 					self.package = ImplementationGuidePackage.instantiate(fromArray: val, owner: self) as? [ImplementationGuidePackage]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "package", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "package", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -201,7 +201,7 @@ public class ImplementationGuide: DomainResource {
 					self.page = ImplementationGuidePage(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "page", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "page", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -213,7 +213,7 @@ public class ImplementationGuide: DomainResource {
 					self.publisher = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -222,7 +222,7 @@ public class ImplementationGuide: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -234,7 +234,7 @@ public class ImplementationGuide: DomainResource {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -246,7 +246,7 @@ public class ImplementationGuide: DomainResource {
 					self.useContext = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "useContext", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "useContext", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["version"] {
@@ -255,7 +255,7 @@ public class ImplementationGuide: DomainResource {
 					self.version = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "version", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "version", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -357,7 +357,7 @@ public class ImplementationGuideContact: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["telecom"] {
@@ -366,7 +366,7 @@ public class ImplementationGuideContact: BackboneElement {
 					self.telecom = ContactPoint.instantiate(fromArray: val, owner: self) as? [ContactPoint]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "telecom", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "telecom", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -427,7 +427,7 @@ public class ImplementationGuideDependency: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -439,7 +439,7 @@ public class ImplementationGuideDependency: BackboneElement {
 					self.uri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "uri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "uri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -502,7 +502,7 @@ public class ImplementationGuideGlobal: BackboneElement {
 					self.profile = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "profile", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "profile", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -514,7 +514,7 @@ public class ImplementationGuideGlobal: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -580,7 +580,7 @@ public class ImplementationGuidePackage: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -589,7 +589,7 @@ public class ImplementationGuidePackage: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -601,7 +601,7 @@ public class ImplementationGuidePackage: BackboneElement {
 					self.resource = ImplementationGuidePackageResource.instantiate(fromArray: val, owner: self) as? [ImplementationGuidePackageResource]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "resource", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "resource", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -685,7 +685,7 @@ public class ImplementationGuidePackageResource: BackboneElement {
 					self.acronym = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "acronym", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "acronym", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -694,7 +694,7 @@ public class ImplementationGuidePackageResource: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleFor"] {
@@ -703,7 +703,7 @@ public class ImplementationGuidePackageResource: BackboneElement {
 					self.exampleFor = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleFor", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleFor", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -712,7 +712,7 @@ public class ImplementationGuidePackageResource: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["purpose"] {
@@ -721,7 +721,7 @@ public class ImplementationGuidePackageResource: BackboneElement {
 					self.purpose = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "purpose", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "purpose", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -733,7 +733,7 @@ public class ImplementationGuidePackageResource: BackboneElement {
 					self.sourceReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sourceReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sourceReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sourceUri"] {
@@ -742,7 +742,7 @@ public class ImplementationGuidePackageResource: BackboneElement {
 					self.sourceUri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sourceUri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sourceUri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			
@@ -838,7 +838,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.format = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "format", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "format", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["kind"] {
@@ -847,7 +847,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.kind = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -859,7 +859,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -871,7 +871,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.package = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "package", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "package", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["page"] {
@@ -880,7 +880,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.page = ImplementationGuidePage.instantiate(fromArray: val, owner: self) as? [ImplementationGuidePage]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "page", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "page", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["source"] {
@@ -889,7 +889,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.source = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "source", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "source", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -901,7 +901,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

@@ -70,7 +70,7 @@ public class Specimen: DomainResource {
 					self.accessionIdentifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "accessionIdentifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "accessionIdentifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["collection"] {
@@ -79,7 +79,7 @@ public class Specimen: DomainResource {
 					self.collection = SpecimenCollection(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "collection", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "collection", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["container"] {
@@ -88,7 +88,7 @@ public class Specimen: DomainResource {
 					self.container = SpecimenContainer.instantiate(fromArray: val, owner: self) as? [SpecimenContainer]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "container", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "container", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -97,7 +97,7 @@ public class Specimen: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["parent"] {
@@ -106,7 +106,7 @@ public class Specimen: DomainResource {
 					self.parent = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "parent", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "parent", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["receivedTime"] {
@@ -115,7 +115,7 @@ public class Specimen: DomainResource {
 					self.receivedTime = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "receivedTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "receivedTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -124,7 +124,7 @@ public class Specimen: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subject"] {
@@ -133,7 +133,7 @@ public class Specimen: DomainResource {
 					self.subject = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -145,7 +145,7 @@ public class Specimen: DomainResource {
 					self.treatment = SpecimenTreatment.instantiate(fromArray: val, owner: self) as? [SpecimenTreatment]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "treatment", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "treatment", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -154,7 +154,7 @@ public class Specimen: DomainResource {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -246,7 +246,7 @@ public class SpecimenCollection: BackboneElement {
 					self.bodySite = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "bodySite", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "bodySite", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["collectedDateTime"] {
@@ -255,7 +255,7 @@ public class SpecimenCollection: BackboneElement {
 					self.collectedDateTime = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "collectedDateTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "collectedDateTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["collectedPeriod"] {
@@ -264,7 +264,7 @@ public class SpecimenCollection: BackboneElement {
 					self.collectedPeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "collectedPeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "collectedPeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["collector"] {
@@ -273,7 +273,7 @@ public class SpecimenCollection: BackboneElement {
 					self.collector = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "collector", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "collector", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["comment"] {
@@ -282,7 +282,7 @@ public class SpecimenCollection: BackboneElement {
 					self.comment = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "comment", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "comment", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["method"] {
@@ -291,7 +291,7 @@ public class SpecimenCollection: BackboneElement {
 					self.method = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "method", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "method", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["quantity"] {
@@ -300,7 +300,7 @@ public class SpecimenCollection: BackboneElement {
 					self.quantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "quantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "quantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -388,7 +388,7 @@ public class SpecimenContainer: BackboneElement {
 					self.additiveCodeableConcept = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "additiveCodeableConcept", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "additiveCodeableConcept", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["additiveReference"] {
@@ -397,7 +397,7 @@ public class SpecimenContainer: BackboneElement {
 					self.additiveReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "additiveReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "additiveReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["capacity"] {
@@ -406,7 +406,7 @@ public class SpecimenContainer: BackboneElement {
 					self.capacity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "capacity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "capacity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -415,7 +415,7 @@ public class SpecimenContainer: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -424,7 +424,7 @@ public class SpecimenContainer: BackboneElement {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["specimenQuantity"] {
@@ -433,7 +433,7 @@ public class SpecimenContainer: BackboneElement {
 					self.specimenQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "specimenQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "specimenQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -442,7 +442,7 @@ public class SpecimenContainer: BackboneElement {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -513,7 +513,7 @@ public class SpecimenTreatment: BackboneElement {
 					self.additive = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "additive", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "additive", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -522,7 +522,7 @@ public class SpecimenTreatment: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["procedure"] {
@@ -531,7 +531,7 @@ public class SpecimenTreatment: BackboneElement {
 					self.procedure = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "procedure", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "procedure", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

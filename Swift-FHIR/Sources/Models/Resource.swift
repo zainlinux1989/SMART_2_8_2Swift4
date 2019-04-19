@@ -46,7 +46,7 @@ public class Resource: FHIRAbstractResource {
 					self.id = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "id", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "id", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["implicitRules"] {
@@ -55,7 +55,7 @@ public class Resource: FHIRAbstractResource {
 					self.implicitRules = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "implicitRules", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "implicitRules", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["language"] {
@@ -64,7 +64,7 @@ public class Resource: FHIRAbstractResource {
 					self.language = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "language", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "language", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["meta"] {
@@ -73,7 +73,7 @@ public class Resource: FHIRAbstractResource {
 					self.meta = Meta(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "meta", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "meta", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

@@ -264,7 +264,7 @@ open class OAuth2: OAuth2Base {
 		if let scope = scope ?? clientConfig.scope {
 			req.params["scope"] = scope
 		}
-		if let responseType = type(of: self).responseType {
+		if let responseType = Swift.type(of: self).responseType {
 			req.params["response_type"] = responseType
 		}
 		req.add(params: params)

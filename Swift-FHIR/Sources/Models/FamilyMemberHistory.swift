@@ -103,7 +103,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.ageQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ageQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ageQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["ageRange"] {
@@ -112,7 +112,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.ageRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ageRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ageRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["ageString"] {
@@ -121,7 +121,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.ageString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ageString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ageString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["bornDate"] {
@@ -130,7 +130,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.bornDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "bornDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "bornDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["bornPeriod"] {
@@ -139,7 +139,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.bornPeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "bornPeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "bornPeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["bornString"] {
@@ -148,7 +148,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.bornString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "bornString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "bornString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["condition"] {
@@ -157,7 +157,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.condition = FamilyMemberHistoryCondition.instantiate(fromArray: val, owner: self) as? [FamilyMemberHistoryCondition]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "condition", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "condition", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -166,7 +166,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["deceasedBoolean"] {
@@ -175,7 +175,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.deceasedBoolean = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "deceasedBoolean", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "deceasedBoolean", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["deceasedDate"] {
@@ -184,7 +184,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.deceasedDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "deceasedDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "deceasedDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["deceasedQuantity"] {
@@ -193,7 +193,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.deceasedQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "deceasedQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "deceasedQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["deceasedRange"] {
@@ -202,7 +202,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.deceasedRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "deceasedRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "deceasedRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["deceasedString"] {
@@ -211,7 +211,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.deceasedString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "deceasedString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "deceasedString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["gender"] {
@@ -220,7 +220,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.gender = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "gender", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "gender", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -229,7 +229,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -238,7 +238,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["note"] {
@@ -247,7 +247,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.note = Annotation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "note", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "note", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patient"] {
@@ -256,7 +256,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.patient = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -268,7 +268,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.relationship = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "relationship", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "relationship", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -280,7 +280,7 @@ public class FamilyMemberHistory: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -413,7 +413,7 @@ public class FamilyMemberHistoryCondition: BackboneElement {
 					self.code = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -425,7 +425,7 @@ public class FamilyMemberHistoryCondition: BackboneElement {
 					self.note = Annotation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "note", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "note", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["onsetPeriod"] {
@@ -434,7 +434,7 @@ public class FamilyMemberHistoryCondition: BackboneElement {
 					self.onsetPeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "onsetPeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "onsetPeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["onsetQuantity"] {
@@ -443,7 +443,7 @@ public class FamilyMemberHistoryCondition: BackboneElement {
 					self.onsetQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "onsetQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "onsetQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["onsetRange"] {
@@ -452,7 +452,7 @@ public class FamilyMemberHistoryCondition: BackboneElement {
 					self.onsetRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "onsetRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "onsetRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["onsetString"] {
@@ -461,7 +461,7 @@ public class FamilyMemberHistoryCondition: BackboneElement {
 					self.onsetString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "onsetString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "onsetString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["outcome"] {
@@ -470,7 +470,7 @@ public class FamilyMemberHistoryCondition: BackboneElement {
 					self.outcome = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "outcome", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "outcome", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

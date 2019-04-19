@@ -40,7 +40,7 @@ public class Ratio: Element {
 					self.denominator = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "denominator", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "denominator", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["numerator"] {
@@ -49,7 +49,7 @@ public class Ratio: Element {
 					self.numerator = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "numerator", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "numerator", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

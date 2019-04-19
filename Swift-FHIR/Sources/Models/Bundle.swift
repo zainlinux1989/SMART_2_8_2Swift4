@@ -55,7 +55,7 @@ public class Bundle: Resource {
 					self.entry = BundleEntry.instantiate(fromArray: val, owner: self) as? [BundleEntry]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "entry", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "entry", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["link"] {
@@ -64,7 +64,7 @@ public class Bundle: Resource {
 					self.link = BundleLink.instantiate(fromArray: val, owner: self) as? [BundleLink]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "link", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "link", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["signature"] {
@@ -73,7 +73,7 @@ public class Bundle: Resource {
 					self.signature = Signature(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "signature", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "signature", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["total"] {
@@ -82,7 +82,7 @@ public class Bundle: Resource {
 					self.total = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "total", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "total", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -91,7 +91,7 @@ public class Bundle: Resource {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -169,7 +169,7 @@ public class BundleEntry: BackboneElement {
 					self.fullUrl = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fullUrl", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fullUrl", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["link"] {
@@ -178,7 +178,7 @@ public class BundleEntry: BackboneElement {
 					self.link = BundleLink.instantiate(fromArray: val, owner: self) as? [BundleLink]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "link", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "link", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["request"] {
@@ -187,7 +187,7 @@ public class BundleEntry: BackboneElement {
 					self.request = BundleEntryRequest(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["resource"] {
@@ -196,7 +196,7 @@ public class BundleEntry: BackboneElement {
 					self.resource = Resource.instantiate(from: val, owner: self) as? Resource
 				}
 				else {
-					errors.append(FHIRJSONError(key: "resource", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "resource", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["response"] {
@@ -205,7 +205,7 @@ public class BundleEntry: BackboneElement {
 					self.response = BundleEntryResponse(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "response", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "response", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["search"] {
@@ -214,7 +214,7 @@ public class BundleEntry: BackboneElement {
 					self.search = BundleEntrySearch(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "search", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "search", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -298,7 +298,7 @@ public class BundleEntryRequest: BackboneElement {
 					self.ifMatch = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ifMatch", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ifMatch", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["ifModifiedSince"] {
@@ -307,7 +307,7 @@ public class BundleEntryRequest: BackboneElement {
 					self.ifModifiedSince = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ifModifiedSince", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ifModifiedSince", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["ifNoneExist"] {
@@ -316,7 +316,7 @@ public class BundleEntryRequest: BackboneElement {
 					self.ifNoneExist = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ifNoneExist", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ifNoneExist", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["ifNoneMatch"] {
@@ -325,7 +325,7 @@ public class BundleEntryRequest: BackboneElement {
 					self.ifNoneMatch = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ifNoneMatch", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ifNoneMatch", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["method"] {
@@ -334,7 +334,7 @@ public class BundleEntryRequest: BackboneElement {
 					self.method = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "method", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "method", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -346,7 +346,7 @@ public class BundleEntryRequest: BackboneElement {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -426,7 +426,7 @@ public class BundleEntryResponse: BackboneElement {
 					self.etag = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "etag", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "etag", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["lastModified"] {
@@ -435,7 +435,7 @@ public class BundleEntryResponse: BackboneElement {
 					self.lastModified = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "lastModified", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "lastModified", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["location"] {
@@ -444,7 +444,7 @@ public class BundleEntryResponse: BackboneElement {
 					self.location = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "location", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "location", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -453,7 +453,7 @@ public class BundleEntryResponse: BackboneElement {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -515,7 +515,7 @@ public class BundleEntrySearch: BackboneElement {
 					self.mode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["score"] {
@@ -524,7 +524,7 @@ public class BundleEntrySearch: BackboneElement {
 					self.score = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "score", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "score", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -584,7 +584,7 @@ public class BundleLink: BackboneElement {
 					self.relation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "relation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "relation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -596,7 +596,7 @@ public class BundleLink: BackboneElement {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

@@ -45,7 +45,7 @@ public class Narrative: Element {
 					self.div = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "div", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "div", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -57,7 +57,7 @@ public class Narrative: Element {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

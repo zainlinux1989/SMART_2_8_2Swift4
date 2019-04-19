@@ -89,7 +89,7 @@ public class ProcessRequest: DomainResource {
 					self.action = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "action", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "action", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -101,7 +101,7 @@ public class ProcessRequest: DomainResource {
 					self.created = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "created", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "created", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exclude"] {
@@ -110,7 +110,7 @@ public class ProcessRequest: DomainResource {
 					self.exclude = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exclude", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exclude", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -119,7 +119,7 @@ public class ProcessRequest: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["include"] {
@@ -128,7 +128,7 @@ public class ProcessRequest: DomainResource {
 					self.include = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "include", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "include", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["item"] {
@@ -137,7 +137,7 @@ public class ProcessRequest: DomainResource {
 					self.item = ProcessRequestItem.instantiate(fromArray: val, owner: self) as? [ProcessRequestItem]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "item", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "item", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["nullify"] {
@@ -146,7 +146,7 @@ public class ProcessRequest: DomainResource {
 					self.nullify = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "nullify", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "nullify", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["organization"] {
@@ -155,7 +155,7 @@ public class ProcessRequest: DomainResource {
 					self.organization = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "organization", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "organization", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["originalRuleset"] {
@@ -164,7 +164,7 @@ public class ProcessRequest: DomainResource {
 					self.originalRuleset = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "originalRuleset", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "originalRuleset", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["period"] {
@@ -173,7 +173,7 @@ public class ProcessRequest: DomainResource {
 					self.period = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["provider"] {
@@ -182,7 +182,7 @@ public class ProcessRequest: DomainResource {
 					self.provider = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "provider", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "provider", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reference"] {
@@ -191,7 +191,7 @@ public class ProcessRequest: DomainResource {
 					self.reference = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reference", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reference", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["request"] {
@@ -200,7 +200,7 @@ public class ProcessRequest: DomainResource {
 					self.request = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["response"] {
@@ -209,7 +209,7 @@ public class ProcessRequest: DomainResource {
 					self.response = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "response", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "response", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["ruleset"] {
@@ -218,7 +218,7 @@ public class ProcessRequest: DomainResource {
 					self.ruleset = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ruleset", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ruleset", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["target"] {
@@ -227,7 +227,7 @@ public class ProcessRequest: DomainResource {
 					self.target = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "target", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "target", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -333,7 +333,7 @@ public class ProcessRequestItem: BackboneElement {
 					self.sequenceLinkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

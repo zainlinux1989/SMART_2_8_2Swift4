@@ -54,7 +54,7 @@ public extension Resource {
 	- returns: A string indicating the relative URL base, e.g. "MedicationPrescription"
 	*/
 	public func relativeURLBase() -> String {
-		return type(of: self).resourceType
+		return Swift.type(of: self).resourceType
 	}
 	
 	/**
@@ -194,7 +194,7 @@ public extension Resource {
 				// no resource, but hopefully the id was detected in the Location header, so go and read the resource
 				catch FHIRError.responseNoResourceReceived {
 					if let id = self.id {
-						type(of: self).read(id, server: server) { resource, error in
+						Swift.type(of: self).read(id, server: server) { resource, error in
 							if let resource = resource {
 								_ = self.populate(from: resource.asJSON())
 							}
@@ -259,7 +259,7 @@ public extension Resource {
 		if let server = _server {
 			do {
 				let path = try relativeURLPath()
-				type(of: self).delete(path, server: server, callback: callback)
+				Swift.type(of: self).delete(path, server: server, callback: callback)
 			}
 			catch let error {
 				callback((error as! FHIRError))
@@ -293,9 +293,9 @@ public extension Resource {
 	public func search(_ query: Any) -> FHIRSearch {
 		if let _ = self.id {
 			NSLog("UNFINISHED, must add '_id' reference to search expression")
-			//return FHIRSearch(subject: "_id", reference: myID, type: type(of: self))
+			//return FHIRSearch(subject: "_id", reference: myID, type: Swift.type(of: self))
 		}
-		return FHIRSearch(type: type(of: self), query: query)
+		return FHIRSearch(type: Swift.type(of: self), query: query)
 	}
 	
 	/**
@@ -315,7 +315,7 @@ public extension Resource {
 		if let server = _server {
 			if let server = server as? FHIROpenServer {
 				operation.instance = self
-				type(of: self)._perform(operation: operation, server: server, callback: callback)
+				Swift.type(of: self)._perform(operation: operation, server: server, callback: callback)
 			}
 			else {
 				callback(nil, FHIRError.error("Must be living on a FHIROpenServer or subclass"))

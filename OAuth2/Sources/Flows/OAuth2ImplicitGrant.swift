@@ -46,7 +46,7 @@ open class OAuth2ImplicitGrant: OAuth2 {
 				throw OAuth2Error.invalidRedirectURL(redirect.description)
 			}
 			
-			let params = type(of: self).params(fromQuery: fragment)
+			let params = Swift.type(of: self).params(fromQuery: fragment)
 			let dict = try parseAccessTokenResponse(params: params)
 			logger?.debug("OAuth2", msg: "Successfully extracted access token")
 			didAuthorize(withParameters: dict)

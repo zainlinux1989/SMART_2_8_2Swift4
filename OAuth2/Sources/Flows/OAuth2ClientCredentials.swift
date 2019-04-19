@@ -56,7 +56,7 @@ open class OAuth2ClientCredentials: OAuth2 {
 		}
 		
 		let req = OAuth2AuthRequest(url: (clientConfig.tokenURL ?? clientConfig.authorizeURL))
-		req.params["grant_type"] = type(of: self).grantType
+		req.params["grant_type"] = Swift.type(of: self).grantType
 		if let scope = clientConfig.scope {
 			req.params["scope"] = scope
 		}

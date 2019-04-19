@@ -55,7 +55,7 @@ public class HumanName: Element {
 					self.family = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "family", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "family", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["given"] {
@@ -64,7 +64,7 @@ public class HumanName: Element {
 					self.given = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "given", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "given", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["period"] {
@@ -73,7 +73,7 @@ public class HumanName: Element {
 					self.period = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["prefix"] {
@@ -82,7 +82,7 @@ public class HumanName: Element {
 					self.prefix = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "prefix", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "prefix", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["suffix"] {
@@ -91,7 +91,7 @@ public class HumanName: Element {
 					self.suffix = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "suffix", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "suffix", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["text"] {
@@ -100,7 +100,7 @@ public class HumanName: Element {
 					self.text = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "text", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "text", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["use"] {
@@ -109,7 +109,7 @@ public class HumanName: Element {
 					self.use = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "use", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "use", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

@@ -80,7 +80,7 @@ public class List: DomainResource {
 					self.code = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -89,7 +89,7 @@ public class List: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["emptyReason"] {
@@ -98,7 +98,7 @@ public class List: DomainResource {
 					self.emptyReason = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "emptyReason", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "emptyReason", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["encounter"] {
@@ -107,7 +107,7 @@ public class List: DomainResource {
 					self.encounter = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "encounter", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "encounter", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["entry"] {
@@ -116,7 +116,7 @@ public class List: DomainResource {
 					self.entry = ListEntry.instantiate(fromArray: val, owner: self) as? [ListEntry]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "entry", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "entry", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -125,7 +125,7 @@ public class List: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["mode"] {
@@ -134,7 +134,7 @@ public class List: DomainResource {
 					self.mode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -146,7 +146,7 @@ public class List: DomainResource {
 					self.note = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "note", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "note", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["orderedBy"] {
@@ -155,7 +155,7 @@ public class List: DomainResource {
 					self.orderedBy = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "orderedBy", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "orderedBy", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["source"] {
@@ -164,7 +164,7 @@ public class List: DomainResource {
 					self.source = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "source", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "source", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -173,7 +173,7 @@ public class List: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -185,7 +185,7 @@ public class List: DomainResource {
 					self.subject = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["title"] {
@@ -194,7 +194,7 @@ public class List: DomainResource {
 					self.title = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "title", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "title", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -292,7 +292,7 @@ public class ListEntry: BackboneElement {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["deleted"] {
@@ -301,7 +301,7 @@ public class ListEntry: BackboneElement {
 					self.deleted = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "deleted", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "deleted", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["flag"] {
@@ -310,7 +310,7 @@ public class ListEntry: BackboneElement {
 					self.flag = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "flag", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "flag", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["item"] {
@@ -319,7 +319,7 @@ public class ListEntry: BackboneElement {
 					self.item = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "item", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "item", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

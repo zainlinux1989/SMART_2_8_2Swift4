@@ -112,7 +112,7 @@ public class ClaimResponse: DomainResource {
 					self.addItem = ClaimResponseAddItem.instantiate(fromArray: val, owner: self) as? [ClaimResponseAddItem]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "addItem", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "addItem", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["coverage"] {
@@ -121,7 +121,7 @@ public class ClaimResponse: DomainResource {
 					self.coverage = ClaimResponseCoverage.instantiate(fromArray: val, owner: self) as? [ClaimResponseCoverage]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "coverage", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "coverage", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["created"] {
@@ -130,7 +130,7 @@ public class ClaimResponse: DomainResource {
 					self.created = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "created", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "created", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["disposition"] {
@@ -139,7 +139,7 @@ public class ClaimResponse: DomainResource {
 					self.disposition = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "disposition", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "disposition", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["error"] {
@@ -148,7 +148,7 @@ public class ClaimResponse: DomainResource {
 					self.error = ClaimResponseError.instantiate(fromArray: val, owner: self) as? [ClaimResponseError]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "error", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "error", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["form"] {
@@ -157,7 +157,7 @@ public class ClaimResponse: DomainResource {
 					self.form = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "form", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "form", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -166,7 +166,7 @@ public class ClaimResponse: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["item"] {
@@ -175,7 +175,7 @@ public class ClaimResponse: DomainResource {
 					self.item = ClaimResponseItem.instantiate(fromArray: val, owner: self) as? [ClaimResponseItem]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "item", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "item", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["note"] {
@@ -184,7 +184,7 @@ public class ClaimResponse: DomainResource {
 					self.note = ClaimResponseNote.instantiate(fromArray: val, owner: self) as? [ClaimResponseNote]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "note", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "note", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["organization"] {
@@ -193,7 +193,7 @@ public class ClaimResponse: DomainResource {
 					self.organization = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "organization", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "organization", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["originalRuleset"] {
@@ -202,7 +202,7 @@ public class ClaimResponse: DomainResource {
 					self.originalRuleset = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "originalRuleset", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "originalRuleset", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["outcome"] {
@@ -211,7 +211,7 @@ public class ClaimResponse: DomainResource {
 					self.outcome = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "outcome", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "outcome", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["payeeType"] {
@@ -220,7 +220,7 @@ public class ClaimResponse: DomainResource {
 					self.payeeType = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "payeeType", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "payeeType", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["paymentAdjustment"] {
@@ -229,7 +229,7 @@ public class ClaimResponse: DomainResource {
 					self.paymentAdjustment = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "paymentAdjustment", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "paymentAdjustment", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["paymentAdjustmentReason"] {
@@ -238,7 +238,7 @@ public class ClaimResponse: DomainResource {
 					self.paymentAdjustmentReason = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "paymentAdjustmentReason", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "paymentAdjustmentReason", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["paymentAmount"] {
@@ -247,7 +247,7 @@ public class ClaimResponse: DomainResource {
 					self.paymentAmount = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "paymentAmount", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "paymentAmount", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["paymentDate"] {
@@ -256,7 +256,7 @@ public class ClaimResponse: DomainResource {
 					self.paymentDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "paymentDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "paymentDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["paymentRef"] {
@@ -265,7 +265,7 @@ public class ClaimResponse: DomainResource {
 					self.paymentRef = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "paymentRef", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "paymentRef", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["request"] {
@@ -274,7 +274,7 @@ public class ClaimResponse: DomainResource {
 					self.request = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["requestOrganization"] {
@@ -283,7 +283,7 @@ public class ClaimResponse: DomainResource {
 					self.requestOrganization = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "requestOrganization", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "requestOrganization", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["requestProvider"] {
@@ -292,7 +292,7 @@ public class ClaimResponse: DomainResource {
 					self.requestProvider = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "requestProvider", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "requestProvider", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reserved"] {
@@ -301,7 +301,7 @@ public class ClaimResponse: DomainResource {
 					self.reserved = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reserved", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reserved", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["ruleset"] {
@@ -310,7 +310,7 @@ public class ClaimResponse: DomainResource {
 					self.ruleset = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ruleset", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ruleset", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["totalBenefit"] {
@@ -319,7 +319,7 @@ public class ClaimResponse: DomainResource {
 					self.totalBenefit = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "totalBenefit", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "totalBenefit", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["totalCost"] {
@@ -328,7 +328,7 @@ public class ClaimResponse: DomainResource {
 					self.totalCost = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "totalCost", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "totalCost", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["unallocDeductable"] {
@@ -337,7 +337,7 @@ public class ClaimResponse: DomainResource {
 					self.unallocDeductable = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "unallocDeductable", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "unallocDeductable", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -480,7 +480,7 @@ public class ClaimResponseAddItem: BackboneElement {
 					self.adjudication = ClaimResponseAddItemAdjudication.instantiate(fromArray: val, owner: self) as? [ClaimResponseAddItemAdjudication]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["detail"] {
@@ -489,7 +489,7 @@ public class ClaimResponseAddItem: BackboneElement {
 					self.detail = ClaimResponseAddItemDetail.instantiate(fromArray: val, owner: self) as? [ClaimResponseAddItemDetail]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "detail", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "detail", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fee"] {
@@ -498,7 +498,7 @@ public class ClaimResponseAddItem: BackboneElement {
 					self.fee = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fee", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fee", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["noteNumberLinkId"] {
@@ -507,7 +507,7 @@ public class ClaimResponseAddItem: BackboneElement {
 					self.noteNumberLinkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "noteNumberLinkId", wants: Array<UInt>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "noteNumberLinkId", wants: Array<UInt>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sequenceLinkId"] {
@@ -516,7 +516,7 @@ public class ClaimResponseAddItem: BackboneElement {
 					self.sequenceLinkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: Array<UInt>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: Array<UInt>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["service"] {
@@ -525,7 +525,7 @@ public class ClaimResponseAddItem: BackboneElement {
 					self.service = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "service", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "service", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -610,7 +610,7 @@ public class ClaimResponseAddItemAdjudication: BackboneElement {
 					self.amount = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["code"] {
@@ -619,7 +619,7 @@ public class ClaimResponseAddItemAdjudication: BackboneElement {
 					self.code = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -631,7 +631,7 @@ public class ClaimResponseAddItemAdjudication: BackboneElement {
 					self.value = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -696,7 +696,7 @@ public class ClaimResponseAddItemDetail: BackboneElement {
 					self.adjudication = ClaimResponseAddItemDetailAdjudication.instantiate(fromArray: val, owner: self) as? [ClaimResponseAddItemDetailAdjudication]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fee"] {
@@ -705,7 +705,7 @@ public class ClaimResponseAddItemDetail: BackboneElement {
 					self.fee = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fee", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fee", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["service"] {
@@ -714,7 +714,7 @@ public class ClaimResponseAddItemDetail: BackboneElement {
 					self.service = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "service", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "service", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -782,7 +782,7 @@ public class ClaimResponseAddItemDetailAdjudication: BackboneElement {
 					self.amount = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["code"] {
@@ -791,7 +791,7 @@ public class ClaimResponseAddItemDetailAdjudication: BackboneElement {
 					self.code = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -803,7 +803,7 @@ public class ClaimResponseAddItemDetailAdjudication: BackboneElement {
 					self.value = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -886,7 +886,7 @@ public class ClaimResponseCoverage: BackboneElement {
 					self.businessArrangement = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "businessArrangement", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "businessArrangement", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["claimResponse"] {
@@ -895,7 +895,7 @@ public class ClaimResponseCoverage: BackboneElement {
 					self.claimResponse = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "claimResponse", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "claimResponse", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["coverage"] {
@@ -904,7 +904,7 @@ public class ClaimResponseCoverage: BackboneElement {
 					self.coverage = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "coverage", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "coverage", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -916,7 +916,7 @@ public class ClaimResponseCoverage: BackboneElement {
 					self.focal = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "focal", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "focal", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -928,7 +928,7 @@ public class ClaimResponseCoverage: BackboneElement {
 					self.originalRuleset = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "originalRuleset", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "originalRuleset", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["preAuthRef"] {
@@ -937,7 +937,7 @@ public class ClaimResponseCoverage: BackboneElement {
 					self.preAuthRef = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "preAuthRef", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "preAuthRef", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["relationship"] {
@@ -946,7 +946,7 @@ public class ClaimResponseCoverage: BackboneElement {
 					self.relationship = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "relationship", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "relationship", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -958,7 +958,7 @@ public class ClaimResponseCoverage: BackboneElement {
 					self.sequence = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sequence", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sequence", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1048,7 +1048,7 @@ public class ClaimResponseError: BackboneElement {
 					self.code = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1060,7 +1060,7 @@ public class ClaimResponseError: BackboneElement {
 					self.detailSequenceLinkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "detailSequenceLinkId", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "detailSequenceLinkId", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sequenceLinkId"] {
@@ -1069,7 +1069,7 @@ public class ClaimResponseError: BackboneElement {
 					self.sequenceLinkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subdetailSequenceLinkId"] {
@@ -1078,7 +1078,7 @@ public class ClaimResponseError: BackboneElement {
 					self.subdetailSequenceLinkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subdetailSequenceLinkId", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subdetailSequenceLinkId", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1149,7 +1149,7 @@ public class ClaimResponseItem: BackboneElement {
 					self.adjudication = ClaimResponseItemAdjudication.instantiate(fromArray: val, owner: self) as? [ClaimResponseItemAdjudication]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["detail"] {
@@ -1158,7 +1158,7 @@ public class ClaimResponseItem: BackboneElement {
 					self.detail = ClaimResponseItemDetail.instantiate(fromArray: val, owner: self) as? [ClaimResponseItemDetail]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "detail", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "detail", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["noteNumber"] {
@@ -1167,7 +1167,7 @@ public class ClaimResponseItem: BackboneElement {
 					self.noteNumber = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "noteNumber", wants: Array<UInt>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "noteNumber", wants: Array<UInt>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sequenceLinkId"] {
@@ -1176,7 +1176,7 @@ public class ClaimResponseItem: BackboneElement {
 					self.sequenceLinkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1251,7 +1251,7 @@ public class ClaimResponseItemAdjudication: BackboneElement {
 					self.amount = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["code"] {
@@ -1260,7 +1260,7 @@ public class ClaimResponseItemAdjudication: BackboneElement {
 					self.code = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1272,7 +1272,7 @@ public class ClaimResponseItemAdjudication: BackboneElement {
 					self.value = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1337,7 +1337,7 @@ public class ClaimResponseItemDetail: BackboneElement {
 					self.adjudication = ClaimResponseItemDetailAdjudication.instantiate(fromArray: val, owner: self) as? [ClaimResponseItemDetailAdjudication]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sequenceLinkId"] {
@@ -1346,7 +1346,7 @@ public class ClaimResponseItemDetail: BackboneElement {
 					self.sequenceLinkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1358,7 +1358,7 @@ public class ClaimResponseItemDetail: BackboneElement {
 					self.subDetail = ClaimResponseItemDetailSubDetail.instantiate(fromArray: val, owner: self) as? [ClaimResponseItemDetailSubDetail]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subDetail", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subDetail", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1423,7 +1423,7 @@ public class ClaimResponseItemDetailAdjudication: BackboneElement {
 					self.amount = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["code"] {
@@ -1432,7 +1432,7 @@ public class ClaimResponseItemDetailAdjudication: BackboneElement {
 					self.code = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1444,7 +1444,7 @@ public class ClaimResponseItemDetailAdjudication: BackboneElement {
 					self.value = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1506,7 +1506,7 @@ public class ClaimResponseItemDetailSubDetail: BackboneElement {
 					self.adjudication = ClaimResponseItemDetailSubDetailAdjudication.instantiate(fromArray: val, owner: self) as? [ClaimResponseItemDetailSubDetailAdjudication]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "adjudication", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sequenceLinkId"] {
@@ -1515,7 +1515,7 @@ public class ClaimResponseItemDetailSubDetail: BackboneElement {
 					self.sequenceLinkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sequenceLinkId", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1580,7 +1580,7 @@ public class ClaimResponseItemDetailSubDetailAdjudication: BackboneElement {
 					self.amount = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["code"] {
@@ -1589,7 +1589,7 @@ public class ClaimResponseItemDetailSubDetailAdjudication: BackboneElement {
 					self.code = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1601,7 +1601,7 @@ public class ClaimResponseItemDetailSubDetailAdjudication: BackboneElement {
 					self.value = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1660,7 +1660,7 @@ public class ClaimResponseNote: BackboneElement {
 					self.number = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "number", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "number", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["text"] {
@@ -1669,7 +1669,7 @@ public class ClaimResponseNote: BackboneElement {
 					self.text = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "text", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "text", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -1678,7 +1678,7 @@ public class ClaimResponseNote: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

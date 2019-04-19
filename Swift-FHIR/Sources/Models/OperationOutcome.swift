@@ -43,7 +43,7 @@ public class OperationOutcome: DomainResource {
 					self.issue = OperationOutcomeIssue.instantiate(fromArray: val, owner: self) as? [OperationOutcomeIssue]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "issue", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "issue", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -112,7 +112,7 @@ public class OperationOutcomeIssue: BackboneElement {
 					self.code = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -124,7 +124,7 @@ public class OperationOutcomeIssue: BackboneElement {
 					self.details = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "details", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "details", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["diagnostics"] {
@@ -133,7 +133,7 @@ public class OperationOutcomeIssue: BackboneElement {
 					self.diagnostics = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "diagnostics", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "diagnostics", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["location"] {
@@ -142,7 +142,7 @@ public class OperationOutcomeIssue: BackboneElement {
 					self.location = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "location", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "location", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["severity"] {
@@ -151,7 +151,7 @@ public class OperationOutcomeIssue: BackboneElement {
 					self.severity = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "severity", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "severity", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

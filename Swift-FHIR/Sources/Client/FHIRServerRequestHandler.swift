@@ -38,7 +38,7 @@ open class FHIRServerRequestHandler {
 	
 	public init(_ method: FHIRRequestMethod, resource: Resource? = nil) {
 		self.method = method
-		self.headers = type(of: self).defaultHeaders
+		self.headers = Swift.type(of: self).defaultHeaders
 		self.resource = resource
 	}
 	
@@ -94,19 +94,19 @@ open class FHIRServerRequestHandler {
 	*/
 	open func response(with response: URLResponse?, data inData: Data? = nil, error: Error? = nil) -> FHIRServerResponse {
 		if let res = response {
-			return type(of: self).ResponseType.init(response: res, data: inData, error: error)
+			return Swift.type(of: self).ResponseType.init(response: res, data: inData, error: error)
 		}
 		if let error = error {
-			return type(of: self).ResponseType.init(error: error)
+			return Swift.type(of: self).ResponseType.init(error: error)
 		}
-		return type(of: self).ResponseType.noneReceived()
+		return Swift.type(of: self).ResponseType.noneReceived()
 	}
 	
 	/**
 	Convenience method to indicate a request that has not actually been sent.
 	*/
 	open func notSent(_ reason: String) -> FHIRServerResponse {
-		return type(of: self).ResponseType.init(error: FHIRError.requestNotSent(reason))
+		return Swift.type(of: self).ResponseType.init(error: FHIRError.requestNotSent(reason))
 	}
 	
 	/**

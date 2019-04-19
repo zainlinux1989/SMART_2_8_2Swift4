@@ -47,7 +47,7 @@ public class Binary: Resource {
 					self.content = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "content", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "content", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -59,7 +59,7 @@ public class Binary: Resource {
 					self.contentType = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contentType", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contentType", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

@@ -70,7 +70,7 @@ public class Subscription: DomainResource {
 					self.channel = SubscriptionChannel(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "channel", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "channel", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -82,7 +82,7 @@ public class Subscription: DomainResource {
 					self.contact = ContactPoint.instantiate(fromArray: val, owner: self) as? [ContactPoint]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["criteria"] {
@@ -91,7 +91,7 @@ public class Subscription: DomainResource {
 					self.criteria = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "criteria", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "criteria", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -103,7 +103,7 @@ public class Subscription: DomainResource {
 					self.end = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "end", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "end", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["error"] {
@@ -112,7 +112,7 @@ public class Subscription: DomainResource {
 					self.error = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "error", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "error", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reason"] {
@@ -121,7 +121,7 @@ public class Subscription: DomainResource {
 					self.reason = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reason", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reason", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -133,7 +133,7 @@ public class Subscription: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -145,7 +145,7 @@ public class Subscription: DomainResource {
 					self.tag = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "tag", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "tag", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -229,7 +229,7 @@ public class SubscriptionChannel: BackboneElement {
 					self.endpoint = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "endpoint", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "endpoint", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["header"] {
@@ -238,7 +238,7 @@ public class SubscriptionChannel: BackboneElement {
 					self.header = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "header", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "header", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["payload"] {
@@ -247,7 +247,7 @@ public class SubscriptionChannel: BackboneElement {
 					self.payload = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "payload", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "payload", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -259,7 +259,7 @@ public class SubscriptionChannel: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

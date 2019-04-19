@@ -71,7 +71,7 @@ open class OAuth2PasswordGrant: OAuth2 {
 		}
 		
 		let req = OAuth2AuthRequest(url: (clientConfig.tokenURL ?? clientConfig.authorizeURL))
-		req.params["grant_type"] = type(of: self).grantType
+		req.params["grant_type"] = Swift.type(of: self).grantType
 		req.params["username"] = username
 		req.params["password"] = password
 		if let clientId = clientConfig.clientId {

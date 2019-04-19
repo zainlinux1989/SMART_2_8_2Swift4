@@ -51,7 +51,7 @@ public class ImmunizationRecommendation: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patient"] {
@@ -60,7 +60,7 @@ public class ImmunizationRecommendation: DomainResource {
 					self.patient = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -72,7 +72,7 @@ public class ImmunizationRecommendation: DomainResource {
 					self.recommendation = ImmunizationRecommendationRecommendation.instantiate(fromArray: val, owner: self) as? [ImmunizationRecommendationRecommendation]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "recommendation", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "recommendation", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -155,7 +155,7 @@ public class ImmunizationRecommendationRecommendation: BackboneElement {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -167,7 +167,7 @@ public class ImmunizationRecommendationRecommendation: BackboneElement {
 					self.dateCriterion = ImmunizationRecommendationRecommendationDateCriterion.instantiate(fromArray: val, owner: self) as? [ImmunizationRecommendationRecommendationDateCriterion]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "dateCriterion", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "dateCriterion", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["doseNumber"] {
@@ -176,7 +176,7 @@ public class ImmunizationRecommendationRecommendation: BackboneElement {
 					self.doseNumber = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "doseNumber", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "doseNumber", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["forecastStatus"] {
@@ -185,7 +185,7 @@ public class ImmunizationRecommendationRecommendation: BackboneElement {
 					self.forecastStatus = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "forecastStatus", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "forecastStatus", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -197,7 +197,7 @@ public class ImmunizationRecommendationRecommendation: BackboneElement {
 					self.protocol_fhir = ImmunizationRecommendationRecommendationProtocol(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "protocol", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "protocol", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["supportingImmunization"] {
@@ -206,7 +206,7 @@ public class ImmunizationRecommendationRecommendation: BackboneElement {
 					self.supportingImmunization = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "supportingImmunization", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "supportingImmunization", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["supportingPatientInformation"] {
@@ -215,7 +215,7 @@ public class ImmunizationRecommendationRecommendation: BackboneElement {
 					self.supportingPatientInformation = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "supportingPatientInformation", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "supportingPatientInformation", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["vaccineCode"] {
@@ -224,7 +224,7 @@ public class ImmunizationRecommendationRecommendation: BackboneElement {
 					self.vaccineCode = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "vaccineCode", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "vaccineCode", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -305,7 +305,7 @@ public class ImmunizationRecommendationRecommendationDateCriterion: BackboneElem
 					self.code = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -317,7 +317,7 @@ public class ImmunizationRecommendationRecommendationDateCriterion: BackboneElem
 					self.value = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -379,7 +379,7 @@ public class ImmunizationRecommendationRecommendationProtocol: BackboneElement {
 					self.authority = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "authority", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "authority", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -388,7 +388,7 @@ public class ImmunizationRecommendationRecommendationProtocol: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["doseSequence"] {
@@ -397,7 +397,7 @@ public class ImmunizationRecommendationRecommendationProtocol: BackboneElement {
 					self.doseSequence = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "doseSequence", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "doseSequence", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["series"] {
@@ -406,7 +406,7 @@ public class ImmunizationRecommendationRecommendationProtocol: BackboneElement {
 					self.series = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "series", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "series", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

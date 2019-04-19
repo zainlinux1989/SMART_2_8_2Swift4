@@ -52,7 +52,7 @@ public class Annotation: Element {
 					self.authorReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "authorReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "authorReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["authorString"] {
@@ -61,7 +61,7 @@ public class Annotation: Element {
 					self.authorString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "authorString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "authorString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["text"] {
@@ -70,7 +70,7 @@ public class Annotation: Element {
 					self.text = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "text", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "text", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -82,7 +82,7 @@ public class Annotation: Element {
 					self.time = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "time", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "time", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

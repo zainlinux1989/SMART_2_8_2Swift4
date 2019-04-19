@@ -58,7 +58,7 @@ public class Attachment: Element {
 					self.contentType = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contentType", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contentType", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["creation"] {
@@ -67,7 +67,7 @@ public class Attachment: Element {
 					self.creation = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "creation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "creation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["data"] {
@@ -76,7 +76,7 @@ public class Attachment: Element {
 					self.data = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "data", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "data", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["hash"] {
@@ -85,7 +85,7 @@ public class Attachment: Element {
 					self.hash = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "hash", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "hash", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["language"] {
@@ -94,7 +94,7 @@ public class Attachment: Element {
 					self.language = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "language", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "language", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["size"] {
@@ -103,7 +103,7 @@ public class Attachment: Element {
 					self.size = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "size", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "size", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["title"] {
@@ -112,7 +112,7 @@ public class Attachment: Element {
 					self.title = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "title", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "title", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["url"] {
@@ -121,7 +121,7 @@ public class Attachment: Element {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

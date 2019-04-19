@@ -50,7 +50,7 @@ public class Medication: DomainResource {
 					self.code = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["isBrand"] {
@@ -59,7 +59,7 @@ public class Medication: DomainResource {
 					self.isBrand = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "isBrand", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "isBrand", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["manufacturer"] {
@@ -68,7 +68,7 @@ public class Medication: DomainResource {
 					self.manufacturer = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "manufacturer", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "manufacturer", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["package"] {
@@ -77,7 +77,7 @@ public class Medication: DomainResource {
 					self.package = MedicationPackage(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "package", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "package", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["product"] {
@@ -86,7 +86,7 @@ public class Medication: DomainResource {
 					self.product = MedicationProduct(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "product", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "product", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -148,7 +148,7 @@ public class MedicationPackage: BackboneElement {
 					self.container = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "container", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "container", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["content"] {
@@ -157,7 +157,7 @@ public class MedicationPackage: BackboneElement {
 					self.content = MedicationPackageContent.instantiate(fromArray: val, owner: self) as? [MedicationPackageContent]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "content", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "content", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -216,7 +216,7 @@ public class MedicationPackageContent: BackboneElement {
 					self.amount = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["item"] {
@@ -225,7 +225,7 @@ public class MedicationPackageContent: BackboneElement {
 					self.item = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "item", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "item", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -284,7 +284,7 @@ public class MedicationProduct: BackboneElement {
 					self.batch = MedicationProductBatch.instantiate(fromArray: val, owner: self) as? [MedicationProductBatch]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "batch", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "batch", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["form"] {
@@ -293,7 +293,7 @@ public class MedicationProduct: BackboneElement {
 					self.form = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "form", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "form", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["ingredient"] {
@@ -302,7 +302,7 @@ public class MedicationProduct: BackboneElement {
 					self.ingredient = MedicationProductIngredient.instantiate(fromArray: val, owner: self) as? [MedicationProductIngredient]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "ingredient", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "ingredient", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -358,7 +358,7 @@ public class MedicationProductBatch: BackboneElement {
 					self.expirationDate = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "expirationDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "expirationDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["lotNumber"] {
@@ -367,7 +367,7 @@ public class MedicationProductBatch: BackboneElement {
 					self.lotNumber = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "lotNumber", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "lotNumber", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -426,7 +426,7 @@ public class MedicationProductIngredient: BackboneElement {
 					self.amount = Ratio(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["item"] {
@@ -435,7 +435,7 @@ public class MedicationProductIngredient: BackboneElement {
 					self.item = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "item", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "item", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

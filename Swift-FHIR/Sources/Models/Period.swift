@@ -40,7 +40,7 @@ public class Period: Element {
 					self.end = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "end", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "end", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["start"] {
@@ -49,7 +49,7 @@ public class Period: Element {
 					self.start = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "start", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "start", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

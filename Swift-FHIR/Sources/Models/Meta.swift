@@ -50,7 +50,7 @@ public class Meta: Element {
 					self.lastUpdated = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "lastUpdated", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "lastUpdated", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["profile"] {
@@ -59,7 +59,7 @@ public class Meta: Element {
 					self.profile = URL.instantiate(fromArray: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "profile", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "profile", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["security"] {
@@ -68,7 +68,7 @@ public class Meta: Element {
 					self.security = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "security", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "security", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["tag"] {
@@ -77,7 +77,7 @@ public class Meta: Element {
 					self.tag = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "tag", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "tag", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["versionId"] {
@@ -86,7 +86,7 @@ public class Meta: Element {
 					self.versionId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "versionId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "versionId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

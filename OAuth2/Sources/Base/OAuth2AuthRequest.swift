@@ -303,7 +303,7 @@ public struct OAuth2RequestParams {
 		guard let params = params else {
 			return ""
 		}
-		return type(of: self).formEncodedQueryStringFor(params)
+		return Swift.type(of: self).formEncodedQueryStringFor(params)
 	}
 	
 	/**

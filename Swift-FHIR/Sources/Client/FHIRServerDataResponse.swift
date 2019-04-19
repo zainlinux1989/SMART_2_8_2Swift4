@@ -30,8 +30,8 @@ extension FHIRServerResponse {
 				if location.hasPrefix(base) {
 					let path = location.replacingOccurrences(of: base, with: "")
 					let components = path.components(separatedBy: "/")
-					guard components.count > 1 && type(of: resource).resourceType == components[0] else {
-						throw FHIRError.responseLocationHeaderResourceTypeMismatch(location, type(of: resource).resourceType)
+					guard components.count > 1 && Swift.type(of: resource).resourceType == components[0] else {
+						throw FHIRError.responseLocationHeaderResourceTypeMismatch(location, Swift.type(of: resource).resourceType)
 					}
 					
 					resource.id = components[1]
@@ -264,8 +264,8 @@ open class FHIRServerJSONResponse: FHIRServerDataResponse {
 			throw FHIRError.responseNoResourceReceived
 		}
 		
-		if let resourceType = json["resourceType"] as? String, resourceType != type(of: resource).resourceType {
-			throw FHIRError.responseResourceTypeMismatch(resourceType, type(of: resource).resourceType)
+		if let resourceType = json["resourceType"] as? String, resourceType != Swift.type(of: resource).resourceType {
+			throw FHIRError.responseResourceTypeMismatch(resourceType, Swift.type(of: resource).resourceType)
 		}
 		if let errors = resource.populate(from: json) {
 			for error in errors {

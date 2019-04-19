@@ -64,7 +64,7 @@ public class RiskAssessment: DomainResource {
 					self.basis = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "basis", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "basis", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["condition"] {
@@ -73,7 +73,7 @@ public class RiskAssessment: DomainResource {
 					self.condition = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "condition", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "condition", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -82,7 +82,7 @@ public class RiskAssessment: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["encounter"] {
@@ -91,7 +91,7 @@ public class RiskAssessment: DomainResource {
 					self.encounter = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "encounter", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "encounter", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -100,7 +100,7 @@ public class RiskAssessment: DomainResource {
 					self.identifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["method"] {
@@ -109,7 +109,7 @@ public class RiskAssessment: DomainResource {
 					self.method = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "method", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "method", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["mitigation"] {
@@ -118,7 +118,7 @@ public class RiskAssessment: DomainResource {
 					self.mitigation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "mitigation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "mitigation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["performer"] {
@@ -127,7 +127,7 @@ public class RiskAssessment: DomainResource {
 					self.performer = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "performer", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "performer", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["prediction"] {
@@ -136,7 +136,7 @@ public class RiskAssessment: DomainResource {
 					self.prediction = RiskAssessmentPrediction.instantiate(fromArray: val, owner: self) as? [RiskAssessmentPrediction]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "prediction", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "prediction", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subject"] {
@@ -145,7 +145,7 @@ public class RiskAssessment: DomainResource {
 					self.subject = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -246,7 +246,7 @@ public class RiskAssessmentPrediction: BackboneElement {
 					self.outcome = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "outcome", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "outcome", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -258,7 +258,7 @@ public class RiskAssessmentPrediction: BackboneElement {
 					self.probabilityCodeableConcept = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "probabilityCodeableConcept", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "probabilityCodeableConcept", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["probabilityDecimal"] {
@@ -267,7 +267,7 @@ public class RiskAssessmentPrediction: BackboneElement {
 					self.probabilityDecimal = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "probabilityDecimal", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "probabilityDecimal", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["probabilityRange"] {
@@ -276,7 +276,7 @@ public class RiskAssessmentPrediction: BackboneElement {
 					self.probabilityRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "probabilityRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "probabilityRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["rationale"] {
@@ -285,7 +285,7 @@ public class RiskAssessmentPrediction: BackboneElement {
 					self.rationale = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "rationale", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "rationale", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["relativeRisk"] {
@@ -294,7 +294,7 @@ public class RiskAssessmentPrediction: BackboneElement {
 					self.relativeRisk = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "relativeRisk", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "relativeRisk", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["whenPeriod"] {
@@ -303,7 +303,7 @@ public class RiskAssessmentPrediction: BackboneElement {
 					self.whenPeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "whenPeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "whenPeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["whenRange"] {
@@ -312,7 +312,7 @@ public class RiskAssessmentPrediction: BackboneElement {
 					self.whenRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "whenRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "whenRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

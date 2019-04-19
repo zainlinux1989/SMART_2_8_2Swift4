@@ -46,7 +46,7 @@ public class DomainResource: Resource {
 					self.contained = Resource.instantiate(fromArray: val, owner: self) as? [Resource]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contained", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contained", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["extension"] {
@@ -55,7 +55,7 @@ public class DomainResource: Resource {
 					self.extension_fhir = Extension.instantiate(fromArray: val, owner: self) as? [Extension]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "extension", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "extension", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["modifierExtension"] {
@@ -64,7 +64,7 @@ public class DomainResource: Resource {
 					self.modifierExtension = Extension.instantiate(fromArray: val, owner: self) as? [Extension]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "modifierExtension", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "modifierExtension", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["text"] {
@@ -73,7 +73,7 @@ public class DomainResource: Resource {
 					self.text = Narrative(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "text", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "text", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

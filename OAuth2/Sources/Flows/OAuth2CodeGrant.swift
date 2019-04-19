@@ -64,7 +64,7 @@ open class OAuth2CodeGrant: OAuth2 {
 		
 		let req = OAuth2AuthRequest(url: (clientConfig.tokenURL ?? clientConfig.authorizeURL))
 		req.params["code"] = code
-		req.params["grant_type"] = type(of: self).grantType
+		req.params["grant_type"] = Swift.type(of: self).grantType
 		req.params["redirect_uri"] = redirect
 		req.params["client_id"] = clientId
 		

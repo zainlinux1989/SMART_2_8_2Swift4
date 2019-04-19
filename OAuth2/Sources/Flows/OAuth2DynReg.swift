@@ -127,12 +127,12 @@ open class OAuth2DynReg {
 		}
 		
 		// grant types, response types and auth method
-		var grant_types = [type(of: client).grantType]
+		var grant_types = [Swift.type(of: client).grantType]
 		if allowRefreshTokens {
 			grant_types.append("refresh_token")
 		}
 		dict["grant_types"] = grant_types
-		if let responseType = type(of: client).responseType {
+		if let responseType = Swift.type(of: client).responseType {
 			dict["response_types"] = [responseType]
 		}
 		dict["token_endpoint_auth_method"] = client.clientConfig.endpointAuthMethod.rawValue

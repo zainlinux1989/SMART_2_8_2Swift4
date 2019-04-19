@@ -47,7 +47,7 @@ public class Coding: Element {
 					self.code = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["display"] {
@@ -56,7 +56,7 @@ public class Coding: Element {
 					self.display = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "display", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "display", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["system"] {
@@ -65,7 +65,7 @@ public class Coding: Element {
 					self.system = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "system", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "system", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["userSelected"] {
@@ -74,7 +74,7 @@ public class Coding: Element {
 					self.userSelected = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "userSelected", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "userSelected", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["version"] {
@@ -83,7 +83,7 @@ public class Coding: Element {
 					self.version = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "version", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "version", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

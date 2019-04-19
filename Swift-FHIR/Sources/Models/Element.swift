@@ -40,7 +40,7 @@ public class Element: FHIRAbstractBase {
 					self.extension_fhir = Extension.instantiate(fromArray: val, owner: self) as? [Extension]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "extension", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "extension", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["id"] {
@@ -49,7 +49,7 @@ public class Element: FHIRAbstractBase {
 					self.id = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "id", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "id", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

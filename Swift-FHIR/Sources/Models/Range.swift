@@ -40,7 +40,7 @@ public class Range: Element {
 					self.high = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "high", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "high", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["low"] {
@@ -49,7 +49,7 @@ public class Range: Element {
 					self.low = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "low", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "low", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

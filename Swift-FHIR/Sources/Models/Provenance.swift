@@ -77,7 +77,7 @@ public class Provenance: DomainResource {
 					self.activity = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "activity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "activity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["agent"] {
@@ -86,7 +86,7 @@ public class Provenance: DomainResource {
 					self.agent = ProvenanceAgent.instantiate(fromArray: val, owner: self) as? [ProvenanceAgent]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "agent", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "agent", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["entity"] {
@@ -95,7 +95,7 @@ public class Provenance: DomainResource {
 					self.entity = ProvenanceEntity.instantiate(fromArray: val, owner: self) as? [ProvenanceEntity]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "entity", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "entity", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["location"] {
@@ -104,7 +104,7 @@ public class Provenance: DomainResource {
 					self.location = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "location", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "location", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["period"] {
@@ -113,7 +113,7 @@ public class Provenance: DomainResource {
 					self.period = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["policy"] {
@@ -122,7 +122,7 @@ public class Provenance: DomainResource {
 					self.policy = URL.instantiate(fromArray: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "policy", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "policy", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reason"] {
@@ -131,7 +131,7 @@ public class Provenance: DomainResource {
 					self.reason = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reason", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reason", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["recorded"] {
@@ -140,7 +140,7 @@ public class Provenance: DomainResource {
 					self.recorded = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "recorded", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "recorded", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -152,7 +152,7 @@ public class Provenance: DomainResource {
 					self.signature = Signature.instantiate(fromArray: val, owner: self) as? [Signature]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "signature", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "signature", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["target"] {
@@ -161,7 +161,7 @@ public class Provenance: DomainResource {
 					self.target = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "target", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "target", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -259,7 +259,7 @@ public class ProvenanceAgent: BackboneElement {
 					self.actor = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "actor", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "actor", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["relatedAgent"] {
@@ -268,7 +268,7 @@ public class ProvenanceAgent: BackboneElement {
 					self.relatedAgent = ProvenanceAgentRelatedAgent.instantiate(fromArray: val, owner: self) as? [ProvenanceAgentRelatedAgent]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "relatedAgent", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "relatedAgent", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["role"] {
@@ -277,7 +277,7 @@ public class ProvenanceAgent: BackboneElement {
 					self.role = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "role", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "role", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -289,7 +289,7 @@ public class ProvenanceAgent: BackboneElement {
 					self.userId = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "userId", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "userId", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -357,7 +357,7 @@ public class ProvenanceAgentRelatedAgent: BackboneElement {
 					self.target = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "target", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "target", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -369,7 +369,7 @@ public class ProvenanceAgentRelatedAgent: BackboneElement {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -440,7 +440,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.agent = ProvenanceAgent(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "agent", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "agent", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["display"] {
@@ -449,7 +449,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.display = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "display", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "display", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reference"] {
@@ -458,7 +458,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.reference = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reference", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reference", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -470,7 +470,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.role = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "role", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "role", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -482,7 +482,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

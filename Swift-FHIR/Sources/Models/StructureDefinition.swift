@@ -120,7 +120,7 @@ public class StructureDefinition: DomainResource {
 					self.abstract = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "abstract", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "abstract", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -132,7 +132,7 @@ public class StructureDefinition: DomainResource {
 					self.base = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "base", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "base", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["code"] {
@@ -141,7 +141,7 @@ public class StructureDefinition: DomainResource {
 					self.code = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["constrainedType"] {
@@ -150,7 +150,7 @@ public class StructureDefinition: DomainResource {
 					self.constrainedType = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "constrainedType", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "constrainedType", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["contact"] {
@@ -159,7 +159,7 @@ public class StructureDefinition: DomainResource {
 					self.contact = StructureDefinitionContact.instantiate(fromArray: val, owner: self) as? [StructureDefinitionContact]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["context"] {
@@ -168,7 +168,7 @@ public class StructureDefinition: DomainResource {
 					self.context = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "context", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "context", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["contextType"] {
@@ -177,7 +177,7 @@ public class StructureDefinition: DomainResource {
 					self.contextType = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contextType", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contextType", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["copyright"] {
@@ -186,7 +186,7 @@ public class StructureDefinition: DomainResource {
 					self.copyright = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "copyright", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "copyright", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -195,7 +195,7 @@ public class StructureDefinition: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -204,7 +204,7 @@ public class StructureDefinition: DomainResource {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["differential"] {
@@ -213,7 +213,7 @@ public class StructureDefinition: DomainResource {
 					self.differential = StructureDefinitionDifferential(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "differential", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "differential", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["display"] {
@@ -222,7 +222,7 @@ public class StructureDefinition: DomainResource {
 					self.display = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "display", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "display", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["experimental"] {
@@ -231,7 +231,7 @@ public class StructureDefinition: DomainResource {
 					self.experimental = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "experimental", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "experimental", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fhirVersion"] {
@@ -240,7 +240,7 @@ public class StructureDefinition: DomainResource {
 					self.fhirVersion = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fhirVersion", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fhirVersion", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -249,7 +249,7 @@ public class StructureDefinition: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["kind"] {
@@ -258,7 +258,7 @@ public class StructureDefinition: DomainResource {
 					self.kind = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -270,7 +270,7 @@ public class StructureDefinition: DomainResource {
 					self.mapping = StructureDefinitionMapping.instantiate(fromArray: val, owner: self) as? [StructureDefinitionMapping]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "mapping", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "mapping", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -279,7 +279,7 @@ public class StructureDefinition: DomainResource {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -291,7 +291,7 @@ public class StructureDefinition: DomainResource {
 					self.publisher = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["requirements"] {
@@ -300,7 +300,7 @@ public class StructureDefinition: DomainResource {
 					self.requirements = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "requirements", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "requirements", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["snapshot"] {
@@ -309,7 +309,7 @@ public class StructureDefinition: DomainResource {
 					self.snapshot = StructureDefinitionSnapshot(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "snapshot", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "snapshot", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -318,7 +318,7 @@ public class StructureDefinition: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -330,7 +330,7 @@ public class StructureDefinition: DomainResource {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -342,7 +342,7 @@ public class StructureDefinition: DomainResource {
 					self.useContext = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "useContext", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "useContext", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["version"] {
@@ -351,7 +351,7 @@ public class StructureDefinition: DomainResource {
 					self.version = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "version", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "version", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -477,7 +477,7 @@ public class StructureDefinitionContact: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["telecom"] {
@@ -486,7 +486,7 @@ public class StructureDefinitionContact: BackboneElement {
 					self.telecom = ContactPoint.instantiate(fromArray: val, owner: self) as? [ContactPoint]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "telecom", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "telecom", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -543,7 +543,7 @@ public class StructureDefinitionDifferential: BackboneElement {
 					self.element = ElementDefinition.instantiate(fromArray: val, owner: self) as? [ElementDefinition]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "element", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "element", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -608,7 +608,7 @@ public class StructureDefinitionMapping: BackboneElement {
 					self.comments = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "comments", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "comments", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identity"] {
@@ -617,7 +617,7 @@ public class StructureDefinitionMapping: BackboneElement {
 					self.identity = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identity", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identity", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -629,7 +629,7 @@ public class StructureDefinitionMapping: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["uri"] {
@@ -638,7 +638,7 @@ public class StructureDefinitionMapping: BackboneElement {
 					self.uri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "uri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "uri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -701,7 +701,7 @@ public class StructureDefinitionSnapshot: BackboneElement {
 					self.element = ElementDefinition.instantiate(fromArray: val, owner: self) as? [ElementDefinition]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "element", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "element", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

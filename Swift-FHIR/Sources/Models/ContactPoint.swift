@@ -50,7 +50,7 @@ public class ContactPoint: Element {
 					self.period = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["rank"] {
@@ -59,7 +59,7 @@ public class ContactPoint: Element {
 					self.rank = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "rank", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "rank", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["system"] {
@@ -68,7 +68,7 @@ public class ContactPoint: Element {
 					self.system = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "system", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "system", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["use"] {
@@ -77,7 +77,7 @@ public class ContactPoint: Element {
 					self.use = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "use", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "use", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["value"] {
@@ -86,7 +86,7 @@ public class ContactPoint: Element {
 					self.value = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

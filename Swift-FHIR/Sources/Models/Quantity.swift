@@ -50,7 +50,7 @@ public class Quantity: Element {
 					self.code = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["comparator"] {
@@ -59,7 +59,7 @@ public class Quantity: Element {
 					self.comparator = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "comparator", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "comparator", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["system"] {
@@ -68,7 +68,7 @@ public class Quantity: Element {
 					self.system = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "system", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "system", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["unit"] {
@@ -77,7 +77,7 @@ public class Quantity: Element {
 					self.unit = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "unit", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "unit", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["value"] {
@@ -86,7 +86,7 @@ public class Quantity: Element {
 					self.value = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

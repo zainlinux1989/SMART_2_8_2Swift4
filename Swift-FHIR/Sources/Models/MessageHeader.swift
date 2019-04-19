@@ -77,7 +77,7 @@ public class MessageHeader: DomainResource {
 					self.author = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "author", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "author", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["data"] {
@@ -86,7 +86,7 @@ public class MessageHeader: DomainResource {
 					self.data = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "data", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "data", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["destination"] {
@@ -95,7 +95,7 @@ public class MessageHeader: DomainResource {
 					self.destination = MessageHeaderDestination.instantiate(fromArray: val, owner: self) as? [MessageHeaderDestination]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "destination", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "destination", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["enterer"] {
@@ -104,7 +104,7 @@ public class MessageHeader: DomainResource {
 					self.enterer = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "enterer", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "enterer", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["event"] {
@@ -113,7 +113,7 @@ public class MessageHeader: DomainResource {
 					self.event = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "event", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "event", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -125,7 +125,7 @@ public class MessageHeader: DomainResource {
 					self.reason = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reason", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reason", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["receiver"] {
@@ -134,7 +134,7 @@ public class MessageHeader: DomainResource {
 					self.receiver = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "receiver", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "receiver", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["response"] {
@@ -143,7 +143,7 @@ public class MessageHeader: DomainResource {
 					self.response = MessageHeaderResponse(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "response", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "response", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["responsible"] {
@@ -152,7 +152,7 @@ public class MessageHeader: DomainResource {
 					self.responsible = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "responsible", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "responsible", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["source"] {
@@ -161,7 +161,7 @@ public class MessageHeader: DomainResource {
 					self.source = MessageHeaderSource(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "source", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "source", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -173,7 +173,7 @@ public class MessageHeader: DomainResource {
 					self.timestamp = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "timestamp", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "timestamp", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -265,7 +265,7 @@ public class MessageHeaderDestination: BackboneElement {
 					self.endpoint = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "endpoint", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "endpoint", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -277,7 +277,7 @@ public class MessageHeaderDestination: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["target"] {
@@ -286,7 +286,7 @@ public class MessageHeaderDestination: BackboneElement {
 					self.target = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "target", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "target", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -352,7 +352,7 @@ public class MessageHeaderResponse: BackboneElement {
 					self.code = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -364,7 +364,7 @@ public class MessageHeaderResponse: BackboneElement {
 					self.details = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "details", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "details", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -373,7 +373,7 @@ public class MessageHeaderResponse: BackboneElement {
 					self.identifier = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -447,7 +447,7 @@ public class MessageHeaderSource: BackboneElement {
 					self.contact = ContactPoint(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contact", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contact", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["endpoint"] {
@@ -456,7 +456,7 @@ public class MessageHeaderSource: BackboneElement {
 					self.endpoint = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "endpoint", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "endpoint", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -468,7 +468,7 @@ public class MessageHeaderSource: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["software"] {
@@ -477,7 +477,7 @@ public class MessageHeaderSource: BackboneElement {
 					self.software = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "software", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "software", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["version"] {
@@ -486,7 +486,7 @@ public class MessageHeaderSource: BackboneElement {
 					self.version = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "version", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "version", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

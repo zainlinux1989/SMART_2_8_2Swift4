@@ -108,7 +108,7 @@ public class Conformance: DomainResource {
 					self.acceptUnknown = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "acceptUnknown", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "acceptUnknown", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -120,7 +120,7 @@ public class Conformance: DomainResource {
 					self.contact = ConformanceContact.instantiate(fromArray: val, owner: self) as? [ConformanceContact]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["copyright"] {
@@ -129,7 +129,7 @@ public class Conformance: DomainResource {
 					self.copyright = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "copyright", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "copyright", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -138,7 +138,7 @@ public class Conformance: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -150,7 +150,7 @@ public class Conformance: DomainResource {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["document"] {
@@ -159,7 +159,7 @@ public class Conformance: DomainResource {
 					self.document = ConformanceDocument.instantiate(fromArray: val, owner: self) as? [ConformanceDocument]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "document", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "document", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["experimental"] {
@@ -168,7 +168,7 @@ public class Conformance: DomainResource {
 					self.experimental = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "experimental", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "experimental", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fhirVersion"] {
@@ -177,7 +177,7 @@ public class Conformance: DomainResource {
 					self.fhirVersion = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fhirVersion", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fhirVersion", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -189,7 +189,7 @@ public class Conformance: DomainResource {
 					self.format = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "format", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "format", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -201,7 +201,7 @@ public class Conformance: DomainResource {
 					self.implementation = ConformanceImplementation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "implementation", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "implementation", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["kind"] {
@@ -210,7 +210,7 @@ public class Conformance: DomainResource {
 					self.kind = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -222,7 +222,7 @@ public class Conformance: DomainResource {
 					self.messaging = ConformanceMessaging.instantiate(fromArray: val, owner: self) as? [ConformanceMessaging]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "messaging", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "messaging", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -231,7 +231,7 @@ public class Conformance: DomainResource {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["profile"] {
@@ -240,7 +240,7 @@ public class Conformance: DomainResource {
 					self.profile = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "profile", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "profile", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["publisher"] {
@@ -249,7 +249,7 @@ public class Conformance: DomainResource {
 					self.publisher = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["requirements"] {
@@ -258,7 +258,7 @@ public class Conformance: DomainResource {
 					self.requirements = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "requirements", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "requirements", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["rest"] {
@@ -267,7 +267,7 @@ public class Conformance: DomainResource {
 					self.rest = ConformanceRest.instantiate(fromArray: val, owner: self) as? [ConformanceRest]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "rest", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "rest", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["software"] {
@@ -276,7 +276,7 @@ public class Conformance: DomainResource {
 					self.software = ConformanceSoftware(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "software", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "software", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -285,7 +285,7 @@ public class Conformance: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["url"] {
@@ -294,7 +294,7 @@ public class Conformance: DomainResource {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["version"] {
@@ -303,7 +303,7 @@ public class Conformance: DomainResource {
 					self.version = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "version", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "version", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -417,7 +417,7 @@ public class ConformanceContact: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["telecom"] {
@@ -426,7 +426,7 @@ public class ConformanceContact: BackboneElement {
 					self.telecom = ContactPoint.instantiate(fromArray: val, owner: self) as? [ContactPoint]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "telecom", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "telecom", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -489,7 +489,7 @@ public class ConformanceDocument: BackboneElement {
 					self.documentation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["mode"] {
@@ -498,7 +498,7 @@ public class ConformanceDocument: BackboneElement {
 					self.mode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -510,7 +510,7 @@ public class ConformanceDocument: BackboneElement {
 					self.profile = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "profile", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "profile", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -576,7 +576,7 @@ public class ConformanceImplementation: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -588,7 +588,7 @@ public class ConformanceImplementation: BackboneElement {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -653,7 +653,7 @@ public class ConformanceMessaging: BackboneElement {
 					self.documentation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["endpoint"] {
@@ -662,7 +662,7 @@ public class ConformanceMessaging: BackboneElement {
 					self.endpoint = ConformanceMessagingEndpoint.instantiate(fromArray: val, owner: self) as? [ConformanceMessagingEndpoint]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "endpoint", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "endpoint", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["event"] {
@@ -671,7 +671,7 @@ public class ConformanceMessaging: BackboneElement {
 					self.event = ConformanceMessagingEvent.instantiate(fromArray: val, owner: self) as? [ConformanceMessagingEvent]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "event", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "event", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -683,7 +683,7 @@ public class ConformanceMessaging: BackboneElement {
 					self.reliableCache = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reliableCache", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reliableCache", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -749,7 +749,7 @@ public class ConformanceMessagingEndpoint: BackboneElement {
 					self.address = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "address", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "address", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -761,7 +761,7 @@ public class ConformanceMessagingEndpoint: BackboneElement {
 					self.protocol_fhir = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "protocol", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "protocol", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -842,7 +842,7 @@ public class ConformanceMessagingEvent: BackboneElement {
 					self.category = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "category", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "category", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["code"] {
@@ -851,7 +851,7 @@ public class ConformanceMessagingEvent: BackboneElement {
 					self.code = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -863,7 +863,7 @@ public class ConformanceMessagingEvent: BackboneElement {
 					self.documentation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["focus"] {
@@ -872,7 +872,7 @@ public class ConformanceMessagingEvent: BackboneElement {
 					self.focus = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "focus", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "focus", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -884,7 +884,7 @@ public class ConformanceMessagingEvent: BackboneElement {
 					self.mode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -896,7 +896,7 @@ public class ConformanceMessagingEvent: BackboneElement {
 					self.request = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -908,7 +908,7 @@ public class ConformanceMessagingEvent: BackboneElement {
 					self.response = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "response", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "response", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1007,7 +1007,7 @@ public class ConformanceRest: BackboneElement {
 					self.compartment = URL.instantiate(fromArray: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "compartment", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "compartment", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["documentation"] {
@@ -1016,7 +1016,7 @@ public class ConformanceRest: BackboneElement {
 					self.documentation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["interaction"] {
@@ -1025,7 +1025,7 @@ public class ConformanceRest: BackboneElement {
 					self.interaction = ConformanceRestInteraction.instantiate(fromArray: val, owner: self) as? [ConformanceRestInteraction]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "interaction", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "interaction", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["mode"] {
@@ -1034,7 +1034,7 @@ public class ConformanceRest: BackboneElement {
 					self.mode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "mode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1046,7 +1046,7 @@ public class ConformanceRest: BackboneElement {
 					self.operation = ConformanceRestOperation.instantiate(fromArray: val, owner: self) as? [ConformanceRestOperation]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "operation", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "operation", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["resource"] {
@@ -1055,7 +1055,7 @@ public class ConformanceRest: BackboneElement {
 					self.resource = ConformanceRestResource.instantiate(fromArray: val, owner: self) as? [ConformanceRestResource]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "resource", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "resource", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1067,7 +1067,7 @@ public class ConformanceRest: BackboneElement {
 					self.searchParam = ConformanceRestResourceSearchParam.instantiate(fromArray: val, owner: self) as? [ConformanceRestResourceSearchParam]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "searchParam", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "searchParam", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["security"] {
@@ -1076,7 +1076,7 @@ public class ConformanceRest: BackboneElement {
 					self.security = ConformanceRestSecurity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "security", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "security", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["transactionMode"] {
@@ -1085,7 +1085,7 @@ public class ConformanceRest: BackboneElement {
 					self.transactionMode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "transactionMode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "transactionMode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1169,7 +1169,7 @@ public class ConformanceRestInteraction: BackboneElement {
 					self.code = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1181,7 +1181,7 @@ public class ConformanceRestInteraction: BackboneElement {
 					self.documentation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1241,7 +1241,7 @@ public class ConformanceRestOperation: BackboneElement {
 					self.definition = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "definition", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "definition", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1253,7 +1253,7 @@ public class ConformanceRestOperation: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1346,7 +1346,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.conditionalCreate = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "conditionalCreate", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "conditionalCreate", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["conditionalDelete"] {
@@ -1355,7 +1355,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.conditionalDelete = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "conditionalDelete", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "conditionalDelete", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["conditionalUpdate"] {
@@ -1364,7 +1364,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.conditionalUpdate = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "conditionalUpdate", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "conditionalUpdate", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["interaction"] {
@@ -1373,7 +1373,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.interaction = ConformanceRestResourceInteraction.instantiate(fromArray: val, owner: self) as? [ConformanceRestResourceInteraction]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "interaction", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "interaction", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1385,7 +1385,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.profile = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "profile", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "profile", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["readHistory"] {
@@ -1394,7 +1394,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.readHistory = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "readHistory", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "readHistory", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["searchInclude"] {
@@ -1403,7 +1403,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.searchInclude = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "searchInclude", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "searchInclude", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["searchParam"] {
@@ -1412,7 +1412,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.searchParam = ConformanceRestResourceSearchParam.instantiate(fromArray: val, owner: self) as? [ConformanceRestResourceSearchParam]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "searchParam", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "searchParam", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["searchRevInclude"] {
@@ -1421,7 +1421,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.searchRevInclude = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "searchRevInclude", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "searchRevInclude", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -1430,7 +1430,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1442,7 +1442,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.updateCreate = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "updateCreate", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "updateCreate", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["versioning"] {
@@ -1451,7 +1451,7 @@ public class ConformanceRestResource: BackboneElement {
 					self.versioning = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "versioning", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "versioning", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1548,7 +1548,7 @@ public class ConformanceRestResourceInteraction: BackboneElement {
 					self.code = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1560,7 +1560,7 @@ public class ConformanceRestResourceInteraction: BackboneElement {
 					self.documentation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1636,7 +1636,7 @@ public class ConformanceRestResourceSearchParam: BackboneElement {
 					self.chain = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "chain", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "chain", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["definition"] {
@@ -1645,7 +1645,7 @@ public class ConformanceRestResourceSearchParam: BackboneElement {
 					self.definition = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "definition", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "definition", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["documentation"] {
@@ -1654,7 +1654,7 @@ public class ConformanceRestResourceSearchParam: BackboneElement {
 					self.documentation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "documentation", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["modifier"] {
@@ -1663,7 +1663,7 @@ public class ConformanceRestResourceSearchParam: BackboneElement {
 					self.modifier = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "modifier", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "modifier", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -1672,7 +1672,7 @@ public class ConformanceRestResourceSearchParam: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1684,7 +1684,7 @@ public class ConformanceRestResourceSearchParam: BackboneElement {
 					self.target = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "target", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "target", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -1693,7 +1693,7 @@ public class ConformanceRestResourceSearchParam: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1782,7 +1782,7 @@ public class ConformanceRestSecurity: BackboneElement {
 					self.certificate = ConformanceRestSecurityCertificate.instantiate(fromArray: val, owner: self) as? [ConformanceRestSecurityCertificate]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "certificate", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "certificate", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["cors"] {
@@ -1791,7 +1791,7 @@ public class ConformanceRestSecurity: BackboneElement {
 					self.cors = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "cors", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "cors", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -1800,7 +1800,7 @@ public class ConformanceRestSecurity: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["service"] {
@@ -1809,7 +1809,7 @@ public class ConformanceRestSecurity: BackboneElement {
 					self.service = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "service", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "service", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1866,7 +1866,7 @@ public class ConformanceRestSecurityCertificate: BackboneElement {
 					self.blob = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "blob", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "blob", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -1875,7 +1875,7 @@ public class ConformanceRestSecurityCertificate: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -1938,7 +1938,7 @@ public class ConformanceSoftware: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -1950,7 +1950,7 @@ public class ConformanceSoftware: BackboneElement {
 					self.releaseDate = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "releaseDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "releaseDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["version"] {
@@ -1959,7 +1959,7 @@ public class ConformanceSoftware: BackboneElement {
 					self.version = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "version", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "version", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
