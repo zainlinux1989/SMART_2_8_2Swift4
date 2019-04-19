@@ -37,7 +37,7 @@ public class PatientListViewController: UITableViewController {
 		}
 	}
 	
-	lazy var activity = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    lazy var activity = UIActivityIndicatorView(style: .gray)
 	
 	weak var headerLabel: UILabel?
 	
@@ -113,7 +113,7 @@ public class PatientListViewController: UITableViewController {
 		}
 	}
 	
-	public func dismissFromModal(_ sender: AnyObject?) {
+	@objc func dismissFromModal(_ sender: AnyObject?) {
 		presentingViewController?.dismiss(animated: nil != sender)
 	}
 	
@@ -212,7 +212,7 @@ extension PatientList {
  */
 class PatientTableViewCell: UITableViewCell {
 	
-	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
 	}
 
@@ -225,9 +225,9 @@ class PatientTableViewCell: UITableViewCell {
 		
 		// birthday and age
 		if let bdate = patient?.birthDate {
-			let attr = NSMutableAttributedString(string: "\(bdate.description)  (\(patient!.currentAge))", attributes: [NSForegroundColorAttributeName: UIColor.gray])
+            let attr = NSMutableAttributedString(string: "\(bdate.description)  (\(patient!.currentAge))", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
 			attr.setAttributes([
-					NSForegroundColorAttributeName: UIColor.black
+                NSAttributedString.Key.foregroundColor: UIColor.black
 				], range: NSMakeRange(0, 4))
 			detailTextLabel?.attributedText = attr
 		}

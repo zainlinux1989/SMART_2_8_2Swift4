@@ -50,7 +50,7 @@ public class PatientList {
 	}
 	
 	/// A block to be called when the `patients` property changes.
-	public var onPatientUpdate: ((Void) -> Void)?
+    public var onPatientUpdate: (() -> Void)?
 	
 	private(set) public var expectedNumberOfPatients: UInt = 0
 	
