@@ -1,0 +1,13 @@
+*.pyc
+__pycache__
+env
+
+# ignore the actually used settings file
+/settings.py
+
+# ignore downloads
+/downloads
+
+# ignore IDE files
+*.sublime-*
+

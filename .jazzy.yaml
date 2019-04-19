@@ -1,0 +1,91 @@
+# Jazzy config
+module: SMART
+author: SMART Health IT
+author_url:  http://www.smarthealthit.org
+
+root_url:    http://smart-on-fhir.github.io/Swift-SMART
+github_url:  https://github.com/smart-on-fhir/Swift-SMART
+
+theme: fullwidth
+custom_categories:
+  - name: Client
+    children:
+    - Client
+    - SMARTAuthProperties
+    - SMARTAuthGranularity
+    - FHIRError
+    - FHIRJSON
+    - FHIRJSONError
+    - FHIRJSONErrorType
+
+  - name: Server Interaction
+    children:
+    - Server
+    - FHIRServer
+    - FHIROpenServer
+    - FHIRErrorCallback
+    - FHIROperation
+    - FHIROperationContext
+    - FHIRRequestHeaderField
+    - FHIRRequestHeaders
+    - FHIRRequestMethod
+    - FHIRResourceErrorCallback
+    - FHIRSearch
+    - FHIRServerDataRequestHandler
+    - FHIRServerDataResponse
+    - FHIRServerJSONRequestHandler
+    - FHIRServerJSONResponse
+    - FHIRServerRequestHandler
+    - FHIRServerResponse
+
+  - name: Patient List
+    children:
+    - PatientList
+    - PatientListAll
+    - PatientListQuery
+    - PatientListOrder
+    - PatientListStatus
+    - PatientListSection
+    - PatientListViewController
+
+  - name: OAuth2
+    children:
+    - OAuth2
+    - OAuth2AuthConfig
+    - OAuth2AuthRequest
+    - OAuth2Authorizer
+    - OAuth2AuthorizerUI
+    - OAuth2Base
+    - OAuth2ClientConfig
+    - OAuth2ClientCredentials
+    - OAuth2CodeGrant
+    - OAuth2CodeGrantBasicAuth
+    - OAuth2ContextStore
+    - OAuth2DataTaskRequestPerformer
+    - OAuth2DebugLogger
+    - OAuth2DebugURLSessionDelegate
+    - OAuth2DynReg
+    - OAuth2EndpointAuthMethod
+    - OAuth2Error
+    - OAuth2HTTPContentType
+    - OAuth2HTTPMethod
+    - OAuth2Headers
+    - OAuth2ImplicitGrant
+    - OAuth2JSON
+    - OAuth2LogLevel
+    - OAuth2Logger
+    - OAuth2PasswordGrant
+    - OAuth2RequestParams
+    - OAuth2RequestPerformer
+    - OAuth2Requestable
+    - OAuth2Response
+    - OAuth2Securable
+    - OAuth2StringDict
+    - OAuth2WebViewController
+
+  - name: Keychain
+    children:
+    - Keychain
+    - KeychainItemType
+    - KeychainServiceType
+    - KeychainGenericPasswordType
