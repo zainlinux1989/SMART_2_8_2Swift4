@@ -65,7 +65,7 @@ extension NSDecimalNumber {
 		TODO: improve to avoid double precision issues
 	 */
 	public convenience init(json: NSNumber) {
-		if let _ = json.stringValue.characters.index(of: ".") {
+		if let _ = json.stringValue.index(of: ".") {
 			self.init(string: String(format: "%.15g", json.doubleValue))
 		}
 		else {

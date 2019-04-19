@@ -710,7 +710,7 @@ class DateAndTimeParser {
 							tzStr += hourStr
 							var tzhour = 0
 							var tzmin = 0
-							if 2 == hourStr.characters.count {
+							if 2 == hourStr.count {
 								tzhour = Int(hourStr) ?? 0
 								if nil != scanner.fhir_scanString(":"), let tzm = scanner.fhir_scanInt() {
 									tzStr += (tzm < 10) ? ":0\(tzm)" : ":\(tzm)"
@@ -719,7 +719,7 @@ class DateAndTimeParser {
 									}
 								}
 							}
-							else if 4 == hourStr.characters.count {
+							else if 4 == hourStr.count {
 								tzhour = Int(hourStr.substring(to: hourStr.index(hourStr.startIndex, offsetBy: 2)))!
 								tzmin = Int(hourStr.substring(from: hourStr.index(hourStr.startIndex, offsetBy: 2)))!
 							}
